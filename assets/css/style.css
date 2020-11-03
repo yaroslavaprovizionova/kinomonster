@@ -1,0 +1,819 @@
+/* COMMON */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+}
+
+.wrapper{
+  width: auto;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.site-content {
+  max-width: 1200px;
+  width: auto;
+  margin: 20px auto;
+  overflow: hidden;
+  background-color: white;
+}
+
+input, textarea {
+  outline: 0;
+  border: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+  width: 60%;
+  padding: 8px;
+  border: solid 1px #f2f2f2;
+  color: #5d5d5d;
+}
+
+h1, h2 {
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+  font: normal 170% 'century gothic', arial, sans-serif;
+  color:#136cb2;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+p {
+  padding: 0 0 20px 0;
+  line-height: 1.7em;
+}
+
+a {
+  text-decoration: none ;
+  outline: none;
+  color: #aeb002;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #808080;
+}
+
+ul {
+  margin: 2px 0 22px 17px;
+}
+
+ul li {
+  margin: 0 0 6px 0;
+  padding: 0 0 4px 5px;
+  line-height: 1.5em;
+}
+
+/* HEADER BLOCK */
+
+.header-wr {
+  background-color: darkslateblue;
+}
+
+.header {
+  position: relative;
+  max-width: 1200px;
+  min-width: 900px;
+  width: auto;
+  height: 90px;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+.logo {
+  float: left;
+  padding: 10px 20px;
+  padding-bottom: 20px;
+}
+
+.logo-text-title,
+.logo-text-desc {
+  margin: 0 0 0 9px;
+  font: normal 200% 'century gothic', arial, sans-serif;
+}
+
+.logo-text-title,
+.logo-text-link,
+.logo-text-link:hover {
+  padding: 0;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-text-desc {
+  padding: 4px 0 0 0;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.menubar {
+  padding-top: 15px;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+}
+
+.menu-item {
+  float: left;
+  margin: 1px 2px 0 0;
+  padding: 0 0 0 9px;
+  list-style: none;
+}
+
+.menu-link {
+  display:block;
+  height: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font: normal 100% 'trebuchet ms', sans-serif;
+  color: #fff;
+}
+
+.selected {
+  color: #808080;
+  font-weight: bold;
+}
+
+.menu-link:hover {
+  color: #e4ec04;
+}
+
+hr {
+  border: solid 1px #f3f3f3;
+}
+
+ /* ASIDE BLOCK */
+
+.sidebar-container {
+  float: right;
+  width: 25%;
+}
+
+.sidebar {
+  float: right;
+  width: 222px;
+  margin: 0 0 16px 0;
+  padding: 5%;
+  border: solid 1px #f2f2f2;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+input.btn {
+  padding: 8px;
+  border: solid 1px #f2f2f2;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+}
+
+.sidebar-title {
+  color: #136cb2;
+}
+
+.lables-passreg-text {
+  margin-top: 3%;
+  margin-left: 2%;
+  font-size: 0.7em;
+}
+
+.sidebar-text {
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+.sidebar-list {
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 0;
+  list-style-type: none;
+}
+
+.rating-sidebar {
+  float: right;
+}
+
+/* MAIN BLOCK */
+.content {
+  float: left;
+  width: 73%;
+  padding: 0 0 0 5px;
+  text-align:left;
+}
+
+.films-block {
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.films-block-img-link {
+  display: inline-block;
+  width: 24%;
+  height: auto;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.films-block-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: solid 5px #dad7d5;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+.films-block-img:hover {
+  transform: scale(1.1);
+  border: solid 5px #808080;
+}
+
+.films-block-text {
+  padding-top: 10px;
+  padding-bottom: 0;
+  line-height: normal;
+}
+
+.films-block-text:hover {
+  color: #808080;
+}
+
+.post-content {
+  font-size: 0.9em;
+}
+
+.post-content-text {
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
+.post-content-item {
+  padding-bottom: 0;
+}
+
+.emply {
+  height: 63px;
+}
+/* FOOTER BLOCK */
+.footer {
+  width: auto;
+  box-sizing: border-box;
+  margin-top: -63px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px 0 20px;
+  text-align: center;
+  background-color: darkslateblue;
+  color: #a8aa94;
+}
+
+.footer div {
+  min-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-link {
+  display: inline-block;
+  padding: 0 15px;
+  color: #a8aa94;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-link.selected {
+  color: #fff;
+}
+
+/* SHOW FILM PAGE*/
+
+#video {
+  width: 100%;
+}
+
+.info-film-page {
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.info-film-page .label {
+  font-size: 1.2em;
+}
+
+.info-film-page .value {
+  margin-right: 3%;
+  font-size: 1.2em;
+  color: #49945a;
+}
+
+.description-film {
+  margin-bottom: 15%;
+}
+
+.description-film img {
+  float: left;
+  margin-right: 2%;
+  border-radius: 5px;
+  border: solid 5px #dad7d5;
+}
+
+.reviews,
+.contact {
+  margin-bottom: 4%;
+  font-size: 0.9em;
+}
+
+.reviews .reviews-name,
+.reviews .reviews-email {
+  padding: 1%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #7268ad;
+  color: #fff;
+}
+
+.reviews-text {
+  padding: 2% 0 2% 2%;
+}
+
+/* FILM PAGE */
+.info-film {
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 3%;
+  background-color: #f9f9f9;
+}
+
+.info-film-title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.info-film-img-wr {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.info-film-img {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5%;
+  margin-right: 2%;
+  border-radius: 5px;
+  border: solid 5px #dad7d5;
+}
+
+.info-film-desc {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 69%;
+  padding: 0 2%;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.info-film-button {
+  width: 12%;
+  padding: 5px 15px;
+  font-size: 0.8em;
+  background: #808080;
+  border-radius: 3px;
+  border: 2px solid silver;
+}
+
+.info-film-button-link {
+  color: #fff;
+}
+
+.info-film-button:hover,
+.info-film-button-link:hover {
+  background: silver;
+  color: #404040;
+  text-decoration: none;
+}
+
+/* RATING PAGE */
+table {
+  width: 100%;
+  border: solid 1px #f4f4f4;
+}
+
+td {
+  padding: 2%;
+  border: solid 1px #f4f4f4;
+}
+
+td img {
+  width: 60px;
+  vertical-align: middle;
+}
+.center {
+  text-align: center;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+/* CONTACT PAGE */
+.send-wr{
+  margin: 0 5%;
+}
+.send {
+  margin-bottom: 4%;
+}
+
+input.send-name,
+input.send-email {
+  width: 96%;
+  border: solid 1px #c3c3c3;
+  margin-bottom: 2%;
+}
+
+textarea {
+  width: 98%;
+  height: 200px;
+  border: solid 1px #c3c3c3;
+  margin-bottom: 2%;
+}
+
+input[type="submit"] {
+  background-color: #7268ad;
+  padding: 3%;
+  color: white;
+  border-radius: 5px;
+}
+
+/* ===================
+951 * 1200
+==================== */
+
+@media screen and (max-width: 1200px) {
+  .site-content {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .menu {
+    margin-right: 2%;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  table {
+    width: 96%;
+  }
+}
+
+/* ===================
+720 * 950
+==================== */
+@media screen and (max-width: 950px) {
+  .site-content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  body {
+    font-size: 1em;
+  }
+
+  .header {
+    max-width: 950px;
+    min-width: 700px;
+    box-sizing: border-box;
+  }
+
+  .logo{
+    width: auto;
+  }
+
+  .menu-link {
+    padding: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 85%;
+  }
+
+  input[type="search"] {
+    width: 95%;
+  }
+
+  input[type="submit"] {
+    padding: 3% 10%;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .footer div {
+    min-width: 700px;
+  }
+
+}
+
+/* ===================
+480 * 719
+==================== */
+@media screen and (max-width: 719px) {
+  .header-wr {
+    height: 120px;
+  }
+
+  .header {
+    max-width: 719px;
+    min-width: 300px;
+    box-sizing: border-box;
+    height: 120px;
+  }
+
+  .logo {
+    width: auto;
+    padding-bottom: 30px;
+  }
+
+  .site-content {
+    width: auto;
+    text-align: left;
+  }
+
+  .menubar {
+    width: auto;
+    height: auto;
+  }
+
+  .menu {
+    width: auto;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    left: 5%;
+  }
+
+  .menu-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+
+  .footer div {
+    min-width: 465px;
+  }
+
+  .footer-link {
+    padding: 0 3px;
+  }
+
+  .logo h1 {
+    font: normal 235% 'century gothic', Arial, sans-serif;
+  }
+
+  .logo h2 {
+    font: normal 125% 'century gothic', Arial, sans-serif;
+    color: white;
+  }
+
+  h1,
+  h2 {
+    font: bold 120% 'century gothic', Arial, sans-serif;
+  }
+
+  .films-block-img-link {
+    width: 49%;
+  }
+
+  .films-block-text {
+    padding-bottom: 15px;
+  }
+
+  /* FILM PAGE*/
+
+  .info-film {
+    position: relative;
+  }
+
+  .info-film-img-wr {
+    width: 40%;
+    height: auto;
+  }
+
+  .info-film-desc {
+    width: 58%;
+    padding-bottom: 20px;
+  }
+
+  .info-film-button {
+    position: absolute;
+    bottom:0;
+    right: 30px;
+    width: 50px;
+    margin-top: 10px;
+  }
+
+  /* RATING PAGE*/
+  table {
+    display: block;
+  }
+
+  th {
+    font-size: 75%;
+  }
+
+  td {
+    padding: 0px 25px;
+    margin: 0;
+    font-size: 95%;
+    text-align: left;
+  }
+
+  /* SHOW PAGE*/
+  iframe {
+    width: 88%;
+    height: 100%;
+  }
+
+  .description-film {
+    width: 90%;
+    margin-left: 2%;
+    text-align: left;
+  }
+
+  .description-film img {
+    float: none;
+    display: block;
+    width: 73%;
+    margin: 0;
+    padding: 0;
+    margin-left: 11%;
+    margin-bottom: 7%;
+  }
+
+  .reviews {
+    width: 96%;
+    text-align: left;
+  }
+
+  .send input[type="text"],
+  .send input[type="email"] {
+    width: 90%;
+  }
+
+  .send textarea {
+    width: 94%;
+  }
+}
+
+/* ===================
+320 * 47
+==================== */
+@media screen and (max-width: 479px) {
+  .header-wr {
+    height: 150px;
+  }
+
+  .header {
+    max-width: 479px;
+    min-width: 300px;
+    box-sizing: border-box;
+    height: 150px;
+  }
+
+  .menu {
+    width: auto;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .menu-item {
+    padding: 0 10px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .films-block-img-link {
+    width: 47%;
+  }
+
+  /* FILM PAGE*/
+
+  .info-film-img-wr {
+    width: 250px;
+    height: 350px;
+  }
+
+  .info-film-img-wr {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1%;
+  }
+
+  .info-film-desc {
+    width: auto;
+    padding-bottom: 30px;
+  }
+
+  .info-film-button {
+    left: 10px;
+    width: 50px;
+    margin-top: 10px;
+  }
+
+  /* RATING PAGE*/
+  td {
+    padding: 0;
+    margin: 0;
+    font-size: 95%;
+    text-align: left;
+  }
+
+  /* SHOW PAGE*/
+  iframe {
+    width: 88%;
+    height: 100%;
+  }
+
+  .description-film {
+    width: 90%;
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  .description-film img {
+    float: none;
+    display: block;
+    width: 73%;
+    margin: 0;
+    padding: 0;
+    margin-left: 11%;
+    margin-bottom: 7%;
+  }
+
+  .reviews {
+    text-align: left;
+    width: 96%;
+  }
+
+  .send input[type="text"],
+  .send input[type="email"] {
+    width: 90%;
+  }
+
+  .send textarea {
+    width: 96%;
+  }
+}
+
+
